@@ -1,4 +1,4 @@
-data "aws_iam_policy_document" "hello" {
+data "aws_iam_policy_document" "default_role" {
   statement {
     sid       = ""
     effect    = "Allow"
