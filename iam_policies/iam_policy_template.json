@@ -1,0 +1,99 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+          		"ec2:DescribeInstances",
+        		"ec2:AttachVolumes",
+		        "ec2:DetachVolumes",
+        		"ec2:DescribeSnapshots",
+		        "ec2:DescribeSecurityGroups",
+        		"ec2:CreateTags",
+		       "ec2:ReplaceRouteAssociation"
+    	    ],
+           "Resource": "*"
+       },
+       {
+          "Effect": "Allow",
+          "Action": [
+		"s3:GetObject",
+		"s3:ListObject",
+		"s3:CreateTags",
+		"s3:PutObject",
+		"s3:GetObject",
+		"s3:GetObjectVersions",
+		"s3:GetBucketLocation",
+		"s3:DeleteBucketPolicy"
+          ],
+         "Resource": "*"
+      },
+     {
+	"Effect": "Allow",
+	"Action": [
+	       "ec2:DescribeVPCS",
+	       "ec2:DescribeSubnets",
+	       "ec2:DescribeSecurityGroups",
+           "ec2:CreateVPC",
+	       "ec2:DeleteRouteTable"
+	],
+        "Resource": "*"
+   },
+   {
+     "Effect": "Allow",
+     "Actions": [
+	   "rds:DescribeDBInstance",
+	   "rds:DescribeDBClusters",
+	   "rds:DescribeDBSubnetGroups",
+	   "rds:DescribeReservedDBInstances",
+	   "rds:CreateDBSnapshot",
+	   "rds:ModifyDBInstance"
+     ],
+     "Resource": "*"
+  },
+ {
+      "Effect": "Allow",
+      "Actions": [
+           "ecr:DescribeRepositaries",
+           "ecr:ListImages",
+	   "ecr:PutImage",
+           "ecr:DescribeImageTags",
+           "ecr:GetDownloadURLForLayer",
+           "ecr:CreateRepositaries",
+           "ecr:UpdateClusterConfig",
+           "ecr:TagResource"
+      ],
+      "Resource": "*" 
+    },
+
+    {
+     "Effect": "Allow",
+     "Actions": [
+	   "eks:ListClusters",
+	   "eks:ListAddonss",
+	   "eks:CreateCluster",
+	   "eks:UpdateClusterConfig",
+	   "eks:CreateNodeGroup",
+	   "eks:TagResource"
+     ],
+     "Resource": "*"
+  },
+
+   {
+     "Effect": "Allow",
+     "Actions": [
+	   "lambda:ListFunctions",
+	   "lambda:GetFunctions",
+	   "lambda:GetAlias",
+	   "lambda:GetPolicy",
+	   "lambda:GetFunctionConcureency",
+           "lambda:CreateFunction",
+	   "lambda:UpdateFunctionCode",
+           "lambda:AddPermission"
+    ],
+     "Resource": "*"
+  }
+]
+
+}
+
